@@ -18,7 +18,9 @@ public class Caller implements Runnable {
     }
     public void run(){
 
-        ob.calling(msg);
+       synchronized  (ob){
+           ob.calling(msg);
+       }
 
     }
 
