@@ -29,6 +29,10 @@ public class Two extends Thread{
 
             e.printStackTrace();
 
+        }finally {
+
+            System.out.println(name + ": stopped");
+
         }
     }
 

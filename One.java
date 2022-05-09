@@ -26,6 +26,10 @@ public class One implements Runnable{
 
             e.printStackTrace();
 
+        }finally {
+
+            System.out.println(name + ": stopped");
+
         }
 
 
