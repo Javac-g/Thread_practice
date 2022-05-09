@@ -8,6 +8,7 @@ public class Two extends Thread{
         super();
         this.name = name;
         System.out.println("Created: " + name);
+        start();
 
     }
     public void run(){
@@ -23,6 +24,7 @@ public class Two extends Thread{
 
 
         }
+
         catch (InterruptedException e){
 
             e.printStackTrace();
