@@ -11,6 +11,18 @@ public class App {
         Caller B = new Caller(ob,"to synchronized");
         Caller C = new Caller(ob,"world");
 
+        try{
+
+            A.thread.join();
+            B.thread.join();
+            C.thread.join();
+
+        }catch (InterruptedException e){
+
+            e.printStackTrace();
+
+        }
+
 
 
 
