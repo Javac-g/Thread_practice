@@ -1,19 +1,27 @@
 public class App {
+
     public static void main(String...args){
 
-        One one = new One("One");
+        One A = new One("One");
 
-        Two two = new Two("Two");
+        One C = new One("Three");
 
-        System.out.println(one.getName() + ": is alive: " + one.t.isAlive());
+        Two B = new Two("Two");
 
-        System.out.println(two.getName() + ": is alive: " + two.isAlive());
+        System.out.println(A.getName() + ": is alive: " + A.t.isAlive());
+
+        System.out.println(B.getName() + ": is alive: " + B.isAlive());
+
+        System.out.println(C.getName() + ": is alive: " + C.t.isAlive());
+
 
         try {
 
-            one.t.join();
+            A.t.join();
 
-            two.join();
+            B.join();
+
+            C.t.join();
 
         }catch (InterruptedException e){
 
@@ -21,9 +29,11 @@ public class App {
 
         }finally {
 
-            System.out.println(one.getName() + ": is alive: " + one.t.isAlive());
+            System.out.println(A.getName() + ": is alive: " + A.t.isAlive());
 
-            System.out.println(two.getName() + ": is alive: " + two.isAlive());
+            System.out.println(B.getName() + ": is alive: " + B.isAlive());
+
+            System.out.println(C.getName() + ": is alive: " + C.t.isAlive());
 
         }
 
