@@ -12,6 +12,12 @@ public class One implements Runnable{
 
     }
 
+    public String getName() {
+
+        return name;
+
+    }
+
     public void run(){
 
         try{
