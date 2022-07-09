@@ -1,16 +1,16 @@
 package V1.practice;
 
-public class One  implements Runnable{
-
+public class Two extends Thread{
     String name;
     Thread t;
 
-    public One(String name){
+    public Two(String name){
+        super();
         this.name = name;
-        t = new Thread(this,name);
         System.out.println("Created: " + this);
-        t.start();
+        start();
     }
+    @Override
     public void run(){
         try{
             for (int i = 5; i >=0; i--){
