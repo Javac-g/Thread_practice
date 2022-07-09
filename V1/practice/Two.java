@@ -2,14 +2,18 @@ package V1.practice;
 
 public class Two extends Thread{
     String name;
-    Thread t;
 
     public Two(String name){
-        super();
+        super(name);
         this.name = name;
-        System.out.println("Created: " + this);
+        System.out.println("Created: " + name);
         start();
     }
+
+
+
+
+
     @Override
     public void run(){
         try{

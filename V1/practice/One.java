@@ -8,9 +8,26 @@ public class One  implements Runnable{
     public One(String name){
         this.name = name;
         t = new Thread(this,name);
-        System.out.println("Created: " + this);
+        System.out.println("Created: " + name);
         t.start();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Thread getT() {
+        return t;
+    }
+
+    public void setT(Thread t) {
+        this.t = t;
+    }
+
     public void run(){
         try{
             for (int i = 5; i >=0; i--){
