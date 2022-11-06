@@ -3,7 +3,8 @@ package V2.practice;
 public class Two extends Thread{
     String name;
     public Two(String name){
-        super(name);
+        super();
+        this.name = name;
         System.out.println("Created: " + name);
         start();
     }
@@ -16,6 +17,8 @@ public class Two extends Thread{
             }
         }catch (InterruptedException e){
             e.printStackTrace();
+        }finally {
+            System.out.println(name + " : Finished");
         }
     }
 }

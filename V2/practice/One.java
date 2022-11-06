@@ -18,6 +18,8 @@ public class One implements Runnable{
             }
         }catch (InterruptedException e){
             e.printStackTrace();
+        }finally {
+            System.out.println(name + " : Finished");
         }
     }
 }
