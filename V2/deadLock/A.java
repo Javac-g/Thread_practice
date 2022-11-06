@@ -2,7 +2,7 @@ package V2.deadLock;
 
 public class A {
 
-    public void process(B b){
+    synchronized void process(B b){
 
         String name = Thread.currentThread().getName();
 
