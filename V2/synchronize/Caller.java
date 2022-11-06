@@ -13,6 +13,8 @@ public class Caller implements Runnable {
 
     @Override
     public void run() {
-        call.calling(msg);
+        synchronized (call){
+            call.calling(msg);
+        };
     }
 }
