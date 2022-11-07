@@ -10,7 +10,15 @@ public class Producer implements Runnable{
     @Override
     public void run(){
         int i = 0;
-        while(true)product.put(i++);
+
+        try {
+            while(true){
+                product.put(i++);
+                Thread.sleep(500);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 }

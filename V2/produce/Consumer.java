@@ -10,8 +10,13 @@ public class Consumer implements Runnable{
     }
     @Override
     public void run(){
-        while (true){
-            product.get();
+        try {
+            while(true){
+                product.get();
+                Thread.sleep(500);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 
